@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Parallax Scrolling Website</title>
+  <link rel="shortcut icon" href="/saturn-svg.svg">
+</head>
+
+<body>
+  <header>
+    <a href="#" class="logo">Space</a>
+    <ul>
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Jornada</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+
+  </header>
+  <section>
+    <img src="estrelas.png" id="estrelas">
+    <img src="planetas.png" id="planetas">
+    <img src="montanhas.png" id="montanhas">
+    <a href="#sec" id="btn">Explorar</a>
+    <h2 id="text">Universe</h2>
+  </section>
+  <div class="sec" id="sec">
+    <h2>Efeito Parallax Scrolling</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel pulvinar diam. Proin nec mauris vel neque fringilla accumsan nec in dui. Nunc non risus nulla. Nulla facilisi. Vestibulum convallis orci vel purus molestie, sed accumsan velit cursus. Cras arcu est, molestie a ante a, bibendum ultricies velit. Praesent imperdiet, diam eget consectetur ultrices, justo massa pulvinar justo, eget scelerisque dui risus sit amet nisl. Pellentesque eget elit ligula. Cras in odio ac mauris volutpat mattis. Etiam accumsan, nisi nec efficitur efficitur, lorem velit commodo purus, sed dapibus sem neque ac libero. Mauris molestie leo eros, in condimentum turpis imperdiet non.Morbi mattis at lectus nec fermentum.Integer non erat in nisl tincidunt tristique eget vel lectus. <br><br>Vivamus vitae rhoncus libero. Proin tristique, velit et condimentum mollis, ex magna porttitor libero, ut porta lacus nunc quis lacus. Aenean in eros quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque pellentesque porta libero ut pharetra. Vestibulum nisi nisi, pulvinar vel ipsum at, condimentum tempor odio. Nunc commodo finibus quam, ac vehicula purus ultrices eget. <br><br>Donec ornare auctor finibus. Quisque tempus nisi justo, eget rutrum tortor ultrices non. Nullam tristique mattis aliquet. Praesent at purus sit amet augue consequat imperdiet. Duis dapibus tincidunt orci in viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam eget risus sit amet libero tincidunt rutrum. Mauris pellentesque fermentum felis, rhoncus cursus magna scelerisque in. Quisque egestas consequat efficitur. Sed nec tortor feugiat, elementum sapien vitae, scelerisque ligula. Morbi mattis at lectus nec fermentum.Integer non erat in nisl tincidunt tristique eget vel lectus.Morbi mattis at lectus nec fermentum.Integer non erat in nisl tincidunt tristique eget vel lectus.<br><br>Donec ornare auctor finibus. Quisque tempus nisi justo, eget rutrum tortor ultrices non. Nullam tristique mattis aliquet. Praesent at purus sit amet augue consequat imperdiet. Duis dapibus tincidunt orci in viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam eget risus sit amet libero tincidunt rutrum. Mauris pellentesque fermentum felis, rhoncus cursus magna scelerisque in. Quisque egestas consequat efficitur. Sed nec tortor feugiat, elementum sapien vitae, scelerisque ligula. Morbi mattis at lectus nec fermentum.Integer non erat in nisl tincidunt tristique eget vel lectus.Morbi mattis at lectus nec fermentum.Integer non erat in nisl tincidunt tristique eget vel lectus. </p>
+  </div>
+
+  <script>
+    let estrelas = document.getElementById('estrelas');
+    let planetas = document.getElementById('planetas');
+    let montanhas = document.getElementById('montanhas');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+      let value = window.scrollY;
+      estrelas.style.left = value * 0.25 + 'px';
+      planetas.style.top = value * 1.05 + 'px';
+      text.style.marginRight = value * 4 + 'px';
+      btn.style.marginTop = value * 1.5 + 'px';
+      header.style.top = value * 0.5 + 'px';
+    })
+
+  </script>
+</body>
+
+</html>
